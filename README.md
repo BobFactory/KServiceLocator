@@ -155,9 +155,6 @@ For invoking viewmodel inside a compose
   }
  ```  
  
-Accessing saved state handle for the viewmodel
-
-```kotlin
 
                     
 ### Android Context Support 
