@@ -26,23 +26,3 @@ inline fun <reified VM : ViewModel> ComponentActivity.serviceViewModel(): Lazy<V
         { this.defaultViewModelCreationExtras }
     )
 }
-
-@Composable
-public inline fun <reified VM : ViewModel> serviceViewModel(
-    viewModelStoreOwner: ViewModelStoreOwner = checkNotNull(LocalViewModelStoreOwner.current) {
-        "No ViewModelStoreOwner was provided via LocalViewModelStoreOwner"
-    },
-    key: String? = null,
-    factory: ViewModelProvider.Factory? = getFactory<VM>(),
-    extras: CreationExtras = if (viewModelStoreOwner is HasDefaultViewModelProviderFactory) {
-        viewModelStoreOwner.defaultViewModelCreationExtras
-    } else {
-        CreationExtras.Empty
-    }
-): VM = androidx.lifecycle.viewmodel.compose.viewModel(
-    VM::class.java,
-    viewModelStoreOwner,
-    key,
-    factory,
-    extras
-)
