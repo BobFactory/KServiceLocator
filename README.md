@@ -8,6 +8,9 @@
 
 KServiceLocator is a lightweight, efficient service locator for Android written in Kotlin. It allows you to easily manage your dependencies and make them accessible anywhere in your application. This is a simpler and more robust version of KOIN and can be used on simple projects and also complex projects based on needs. 
 
+You can also read this medium article that explains the usage: 
+https://medium.com/@bawender.y/service-locator-implementation-in-android-63d3a735b553
+
 <br>
 
 ### Why another DI library when HILT and KOIN already exsit ?
